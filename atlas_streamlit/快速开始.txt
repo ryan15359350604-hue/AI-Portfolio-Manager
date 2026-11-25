@@ -1,0 +1,24 @@
+ATLAS / Streamlit
+
+1. 解压到一个文件夹。
+2. 在文件夹里打开终端，先运行：
+   python -m pip install -r requirements.txt
+3. 再运行：
+   python -m streamlit run app.py
+   Windows 也可双击 START_WINDOWS.bat（先安装依赖）。
+4. 浏览器打开终端显示的 localhost 地址。
+
+AI：把 .streamlit/secrets.toml.example 复制为 secrets.toml，
+填入自己的 OPENAI_API_KEY，并设置 ENABLE_AI = true。
+这是独立 API 接入，不会自动使用本聊天的账号或记忆。
+没有 key 时界面可以运行，AI chat 显示未连接。
+
+Models & data 页面可以上传 .py/.ipynb 和数据，检查并暂存版本。
+先下载 integration bundle，再把审阅后的代码接入 models/ 对应模块。
+上传不会自动执行代码。所有金融模型暂为接口，等待你们提供。
+
+这是可运行代码版本，尚未发布为永久网址。
+可部署到 Streamlit Community Cloud，入口 app.py；配置 Secrets。
+旧版网站保持不变。
+
+更多说明见 README.md 和 MODEL_CONTRACTS.md。
